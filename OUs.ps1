@@ -1,4 +1,4 @@
-ECHO Creating OUs
+ECHO "Creating OUs"
 New-ADOrganizationalUnit -Name FA_Computers -Path "DC=AD,DC=fortuneautomotive,DC=com" -Description "FA Computers"
  New-ADOrganizationalUnit -Name Workstations -Path "OU=FA_Computers,DC=AD,DC=fortuneautomotive,DC=com"
   New-ADOrganizationalUnit -Name President -Path "OU=Workstations,OU=FA_Computers,DC=AD,DC=fortuneautomotive,DC=com"
@@ -13,5 +13,17 @@ New-ADOrganizationalUnit -Name FA_Computers -Path "DC=AD,DC=fortuneautomotive,DC
 New-ADOrganizationalUnit -Name FA_Groups -Path "DC=AD,DC=fortuneautomotive,DC=com" -Description "High Level Security Groups"
 New-ADOrganizationalUnit -Name FA_Privileged_Accounts -Path "DC=AD,DC=fortuneautomotive,DC=com" -Description "Privileged Accounts"
 New-ADOrganizationalUnit -Name FA_Users -Path "DC=AD,DC=fortuneautomotive,DC=com" -Description "Non-Privileged Accounts"
-ECHO Done creating OUs
-ECHO.
+ECHO "Done creating OUs"
+ECHO ""
+
+ECHO "Creating groups based on department"
+New-ADGroup -GroupCategory Security -GroupScope Global -Name President -Path "OU=FA_Groups,DC=AD,DC=fortuneautomotive,DC=com"
+New-ADGroup -GroupCategory Security -GroupScope Global -Name Finance -Path "OU=FA_Groups,DC=AD,DC=fortuneautomotive,DC=com"
+New-ADGroup -GroupCategory Security -GroupScope Global -Name HR -Path "OU=FA_Groups,DC=AD,DC=fortuneautomotive,DC=com"
+New-ADGroup -GroupCategory Security -GroupScope Global -Name Sales -Path "OU=FA_Groups,DC=AD,DC=fortuneautomotive,DC=com"
+New-ADGroup -GroupCategory Security -GroupScope Global -Name Legal -Path "OU=FA_Groups,DC=AD,DC=fortuneautomotive,DC=com"
+New-ADGroup -GroupCategory Security -GroupScope Global -Name IT -Path "OU=FA_Groups,DC=AD,DC=fortuneautomotive,DC=com"
+# Create a Leadership group for the President and VPs to access restricted a file share
+New-ADGroup -GroupCategory Security -GroupScope Global -Name Leadership -Path "OU=FA_Groups,DC=AD,DC=fortuneautomotive,DC=com"
+ECHO "Done creating groups"
+ECHO ""
