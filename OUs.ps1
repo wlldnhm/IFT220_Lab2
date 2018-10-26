@@ -1,5 +1,5 @@
 ECHO "Creating OUs"
-New-ADOrganizationalUnit -Name ST_Computers -Path "DC=AD,DC=sparky-tech,DC=com" -Description "FA Computers"
+New-ADOrganizationalUnit -Name ST_Computers -Path "DC=AD,DC=sparky-tech,DC=com" -Description "ST Computers"
  New-ADOrganizationalUnit -Name Workstations -Path "OU=ST_Computers,DC=AD,DC=sparky-tech,DC=com"
   New-ADOrganizationalUnit -Name President -Path "OU=Workstations,OU=ST_Computers,DC=AD,DC=sparky-tech,DC=com"
   New-ADOrganizationalUnit -Name Finance -Path "OU=Workstations,OU=ST_Computers,DC=AD,DC=sparky-tech,DC=com"
