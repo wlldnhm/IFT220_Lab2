@@ -10,7 +10,7 @@ $ipaddress = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | sel
 $prefixlength = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "PrefixLength"
 
 # Set the current IP address as static
-New-NetIPAddress -InterfaceAlias $nicname -IPAddress $ipaddress -AddressFamily IPv4 -PrefixLength $prefixlength
+Set-NetIPAddress -InterfaceAlias $nicname -IPAddress $ipaddress -AddressFamily IPv4 -PrefixLength $prefixlength
 
 
 # Set the DNS address to our loopback
