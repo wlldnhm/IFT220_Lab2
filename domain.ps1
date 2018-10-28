@@ -37,7 +37,4 @@ $domainname = Read-Host -Prompt (" ")
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools | Out-Null
 Install-ADDSForest -DomainName $domainname
 
-dcdiag
-Get-Service adws,kdc,netlogon,dns
-Get-smbshare
-
+# the machine will now reboot
