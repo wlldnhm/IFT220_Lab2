@@ -8,9 +8,12 @@ $nicname = Get-NetAdapter  | select -ExpandProperty "name"
 # Get current IP Address and Prefix Length (subnet mask)
 $ipaddress = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "IPAddress"
 $prefixlength = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "PrefixLength"
+$gateway = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "Gateway"
 
 # Set the current IP address as static
-Set-NetIPAddress -InterfaceAlias $nicname -IPAddress $ipaddress -AddressFamily IPv4 -PrefixLength $prefixlength
+Remove-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 -Confirm:$false
+Remove-NetRoute -InterfaceAlias $nicname -AddressFamily IPv4 -Confirm:$false
+New-NetIPAddress -InterfaceAlias $nicname -IPAddress $ipaddress -AddressFamily IPv4 -PrefixLength $prefixlength
 
 
 # Set the DNS address to our loopback
