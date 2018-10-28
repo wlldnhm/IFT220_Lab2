@@ -27,10 +27,10 @@ Add-PoshGitToProfile
 mkdir .\Documents\GitHub
 cd .\Documents\GitHub
 ```
-5.	Clone your copy of my code (git clone https://github.com/your_account/pstest01.git)
+5.	Clone your copy of my code (`git clone https://github.com/your_account/pstest01.git`)
 6.	Change one or more of the files somehow and save the change(s)
     1.	Use psedit <file name> to edit in ISE, or use your text editor
-7.	Add the changed file(s) to the commit (git add <filename> or git add -A)
-8.	Commit (git commit -m "a note about what you did")
-9.	Push (git push --porcelain)
+7.	Add the changed file(s) to the commit (`git add <filename>` or `git add -A`)
+8.	Commit (`git commit -m "a note about what you did"`)
+9.	Push (`git push --porcelain`)
 10.	Refresh your GitHub site and see if the changes are there
