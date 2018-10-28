@@ -34,4 +34,5 @@ git clone https://github.com/your_account/pstest01.git
 7.	Commit (`git commit -m "a note about what you did"`)
 8.	Push (`git push --porcelain`)
 9.	Refresh your GitHub site and see if the changes are there
-10. Turn in a 
+10. Turn in a screenshot showing your commmits like this:
+![](https://github.com/ericcase/IFT220_Lab2/blob/master/Lab2_Submit_Example.PNG)
