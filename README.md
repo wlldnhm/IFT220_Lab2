@@ -10,14 +10,23 @@ IFT 220 Lab 2
 2.	Fork (top right on the GitHub UI) my code (https://github.com/ericcase/pstest01)
 3.	Install Git for Windows (https://git-for-windows.github.io)
 a.	If you installed a text editor, selected it during the install
-4.	Launch PowerShell ISE and run
-    1.	git config --global user.name 'your name'
-    2.	git config --global user.email 'your email address'
-    3.	git config --global push.default simple
-    4.	Install-Module -Name posh-git -Force
-    5.	Add-PoshGitToProfile
-    6.	mkdir .\Documents\GitHub
-    7.	cd .\Documents\GitHub
+4.	Launch **PowerShell ISE** and run
+```powershell
+# Configure Git
+git config --global user.name 'your name'
+git config --global user.email 'your email address'
+git config --global push.default simple
+
+# Install Gosh-Git
+Install-Module -Name posh-git -Force
+
+# Add Posh to PowerShell profile to get the Git prompt
+Add-PoshGitToProfile
+
+# Make a directory for you GitHub projects
+mkdir .\Documents\GitHub
+cd .\Documents\GitHub
+```
 5.	Clone your copy of my code (git clone https://github.com/your_account/pstest01.git)
 6.	Change one or more of the files somehow and save the change(s)
     1.	Use psedit <file name> to edit in ISE, or use your text editor
