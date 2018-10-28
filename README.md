@@ -5,10 +5,10 @@
 1.	Install https://www.microsoft.com/en-us/download/details.aspx?id=54616 (Win8.1AndW2K12R2-KB3191564-x64.msu) and optionally a text editor: 
     1.	https://notepad-plus-plus.org/repository/7.x/7.5.9/npp.7.5.9.Installer.x64.exe
     1.	https://download.sublimetext.com/Sublime%20Text%20Build%203176%20x64%20Setup.exe
-1.	Fork (top right on the GitHub UI) my code (https://github.com/ericcase/pstest01)
-1.	Install Git for Windows (https://git-for-windows.github.io)
+2.	Fork (top right on the GitHub UI) my code (https://github.com/ericcase/pstest01)
+3.	Install Git for Windows (https://git-for-windows.github.io)
     1.	If you installed a text editor, selected it during the install
-1.	Launch **PowerShell ISE** and run
+4.	Launch **PowerShell ISE** and run
 ```powershell
 # Configure Git
 git config --global user.name 'your name'
@@ -28,9 +28,9 @@ cd .\Documents\GitHub
 # Clone your copy of my code in you new GitHub folder
 git clone https://github.com/your_account/pstest01.git
 ```
-1.	Change one or more of the files somehow and save the change(s)
+5.	Change one or more of the files somehow and save the change(s)
     1.	Use psedit <file name> to edit in ISE, or use your text editor
-1.	Add the changed file(s) to the commit (`git add <filename>` or `git add -A`)
-1.	Commit (`git commit -m "a note about what you did"`)
-1.	Push (`git push --porcelain`)
-1.	Refresh your GitHub site and see if the changes are there
+6.	Add the changed file(s) to the commit (`git add <filename>` or `git add -A`)
+7.	Commit (`git commit -m "a note about what you did"`)
+8.	Push (`git push --porcelain`)
+9.	Refresh your GitHub site and see if the changes are there
