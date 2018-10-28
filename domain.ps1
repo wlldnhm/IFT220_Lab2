@@ -5,15 +5,15 @@
 # Get the name of the network adapter
 $nicname = Get-NetAdapter  | select -ExpandProperty "name"
 
-# Get current IP Address and Prefix Length (subnet mask)
+# Get current IP Address, Prefix Length (subnet mask), and gateway
 $ipaddress = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "IPAddress"
 $prefixlength = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "PrefixLength"
-$gateway = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "Gateway"
+$gateway = Get-NetIPConfiguration -InterfaceAlias $nicname | select -ExpandProperty "IPv4DefaultGateway" | select -ExpandProperty "NextHop"
 
 # Set the current IP address as static
 Remove-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 -Confirm:$false
 Remove-NetRoute -InterfaceAlias $nicname -AddressFamily IPv4 -Confirm:$false
-New-NetIPAddress -InterfaceAlias $nicname -IPAddress $ipaddress -AddressFamily IPv4 -PrefixLength $prefixlength
+New-NetIPAddress -InterfaceAlias $nicname -IPAddress $ipaddress -AddressFamily IPv4 -PrefixLength $prefixlength -DefaultGateway $gateway
 
 
 # Set the DNS address to our loopback
