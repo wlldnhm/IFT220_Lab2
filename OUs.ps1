@@ -1,3 +1,7 @@
+# brutforce script to make some organizational units
+
+# you need to change "DC=ad,DC=sparky-tech,DC=com" to match your domain and update the ST initials to match or remove them
+
 Write-Host -ForegroundColor yellow "Creating OUs"
 New-ADOrganizationalUnit -Name ST_Computers -Path "DC=AD,DC=sparky-tech,DC=com" -Description "ST Computers"
  New-ADOrganizationalUnit -Name Workstations -Path "OU=ST_Computers,DC=AD,DC=sparky-tech,DC=com"
