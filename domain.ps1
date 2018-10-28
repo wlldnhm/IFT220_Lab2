@@ -30,8 +30,8 @@ $Readhost = Read-Host -Prompt ("y | n ")
 
 # Install the AD Services
 Write-Host -ForegroundColor yellow "What's the domain name going to be?  It should be ad.<your ASU email prefix>.lan" 
-$domainname = Read-Host -Prompt ("")
-Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+$domainname = Read-Host -Prompt ("") | Out-Null
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools | Out-Null
 Install-ADDSForest -DomainName $domainname
 
 dcdiag
