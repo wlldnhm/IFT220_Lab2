@@ -11,8 +11,8 @@ b.	https://download.sublimetext.com/Sublime%20Text%20Build%203176%20x64%20Setup.
 3)	Install Git for Windows (https://git-for-windows.github.io)
 a.	If you installed a text editor, selected it during the install
 4)	Launch PowerShell ISE and run
-  a.	git config --global user.name 'your name'
-  b.	git config --global user.email 'your email address'
+    a.	git config --global user.name 'your name'
+    b.	git config --global user.email 'your email address'
   c.	git config --global push.default simple
   d.	Install-Module -Name posh-git -Force
   e.	Add-PoshGitToProfile
