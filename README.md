@@ -1,6 +1,8 @@
 # IFT 220 Lab 2
 ## For ASU's IFT 220 2018 Fall B course.
 
+(Do this on your VM)
+
 1.	Install https://www.microsoft.com/en-us/download/details.aspx?id=54616 (Win8.1AndW2K12R2-KB3191564-x64.msu) and optionally a text editor: 
     1.	https://notepad-plus-plus.org/repository/7.x/7.5.9/npp.7.5.9.Installer.x64.exe
     1.	https://download.sublimetext.com/Sublime%20Text%20Build%203176%20x64%20Setup.exe
