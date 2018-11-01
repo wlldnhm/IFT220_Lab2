@@ -27,7 +27,9 @@ mkdir .\Documents\GitHub
 cd .\Documents\GitHub
 
 # Clone your copy of my code in you new GitHub folder
-git clone https://github.com/your_account/pstest01.git
+git clone https://github.com/your_account/IFT220_Lab2.git
+
+# How can you look at what the clone command did?
 ```
 5.	Change one or more of the files somehow and save the change(s)
     1.	Use psedit <file name> to edit in **PowerShell ISE**, or use your text editor
