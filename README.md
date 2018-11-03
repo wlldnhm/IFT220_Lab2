@@ -7,7 +7,7 @@
 2.	Fork (top right on the GitHub UI) my code (https://github.com/ericcase/IFT220_Lab2)
 3.	Install Git for Windows (https://git-for-windows.github.io)
     1.	If you installed a text editor, selected it during the install
-4.	Launch **PowerShell ISE** and run
+4.	Launch an Elevated (run as Admin) **PowerShell ISE** (don't just PowerShell) and run
 ```powershell
 # Configure Git
 git config --global user.name 'your name'
