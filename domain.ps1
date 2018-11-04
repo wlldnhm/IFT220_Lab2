@@ -1,4 +1,4 @@
-# Build a new DC in a new Forest
+# Builds a new DC in a new Forest
 # Assumption: new machine uses DHCP
 
 # Change from DHCP to static IP using the same IP
