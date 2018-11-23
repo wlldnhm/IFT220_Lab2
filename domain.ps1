@@ -42,7 +42,7 @@ Write-Host -ForegroundColor yellow "ad.4sparky.lan"
 $domainname = Read-Host "ad.<your ASUrite ID >.lan" 
 } until ($domainname.StartsWith("ad."))
 
-Write-Host -ForegroundColor Red "The machine will reboot on its own."
+Write-Host -ForegroundColor Red "After you supply the SafeModeAdministratorPassword the machine will reboot on its own."
 
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools | Out-Null
 Install-ADDSForest -DomainName $domainname
