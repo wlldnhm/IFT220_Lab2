@@ -14,7 +14,7 @@ git config --global user.name 'your name'
 git config --global user.email 'your email address'
 git config --global push.default simple
 
-# Install Gosh-Git
+# Install Posh-Git
 Install-Module -Name posh-git -Force # step 1 was a needed update so we could have the Install-Module cmdlet
 
 # Add Posh to PowerShell profile to get the Git prompt
