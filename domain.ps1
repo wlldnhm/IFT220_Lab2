@@ -1,6 +1,6 @@
 # Builds a new DC in a new Forest
 # Assumption: new machine uses DHCP
-
+# quick edit
 # Change from DHCP to static IP using the same IP
 # Get the name of the network adapter
 $nicname = Get-NetAdapter  | select -ExpandProperty "name"
