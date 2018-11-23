@@ -4,11 +4,14 @@
 # Change from DHCP to static IP using the same IP
 # Get the name of the network adapter
 $nicname = Get-NetAdapter  | select -ExpandProperty "name"
+Write-Host -ForegroundColor yellow $nicname 
 
 # Get current IP Address, Prefix Length (subnet mask), and gateway
 $ipaddress = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "IPAddress"
 $prefixlength = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "PrefixLength"
 $gateway = Get-NetIPConfiguration -InterfaceAlias $nicname | select -ExpandProperty "IPv4DefaultGateway" | select -ExpandProperty "NextHop"
+Write-Host -ForegroundColor yellow $ipaddress/$prefixlength 
+Write-Host -ForegroundColor yellow $gateway 
 
 # Set the current IP address as static
 Remove-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 -Confirm:$false
