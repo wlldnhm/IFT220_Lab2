@@ -6,7 +6,7 @@
 1.	Install https://www.microsoft.com/en-us/download/details.aspx?id=54616 (Win8.1AndW2K12R2-KB3191564-x64.msu)
 1.	Fork (top right on the GitHub UI) my code (https://github.com/ericcase/IFT220_Lab2)
 1.	Install Git for Windows (https://git-for-windows.github.io)
-1.	Launch an Elevated (run as Admin) **PowerShell ISE** (don't just PowerShell) and run
+1.	Launch an Elevated (run as Admin) **PowerShell ISE** (don't use just PowerShell) and run
 ```powershell
 # Configure Git
 git config --global user.name 'your name'
@@ -24,13 +24,12 @@ mkdir .\Documents\GitHub
 cd .\Documents\GitHub
 
 # Clone your copy of my code in you new GitHub folder
-git clone https://github.com/your_account/IFT220_Lab2.git
+git clone https://github.com/***<your_account>***/IFT220_Lab2.git
 
 # Look at what the clone command did.
 ```
-1.	Change one or more of the files somehow and save the change(s)
-    1.	Use psedit <file name> to edit in **PowerShell ISE**, or use your text editor
-    2.  What shoud you change?  See the files for instructions.
+1.	See the files for instructions on what to change
+    1.	Use psedit <file name> to edit in **PowerShell ISE**, or use a text editor
 1.	Add the changed file(s) to the commit (`git add <filename>` or `git add -A`)
 1.	Commit (`git commit -m "a note about what you did"`)
 1.	Push (`git push --porcelain`)
