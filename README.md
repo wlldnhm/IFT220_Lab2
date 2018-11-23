@@ -24,7 +24,7 @@ mkdir .\Documents\GitHub
 cd .\Documents\GitHub
 
 # Clone your copy of my code in you new GitHub folder
-git clone https://github.com/***<your_account>***/IFT220_Lab2.git
+git clone https://github.com/**<your_account>**/IFT220_Lab2.git
 
 # Look at what the clone command did.
 ```
