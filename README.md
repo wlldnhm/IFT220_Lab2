@@ -28,7 +28,7 @@ git clone https://github.com/<your_account>/IFT220_Lab2.git
 
 # Look at what the clone command did.
 ```
-1.	See the files for instructions on what to change
+5.	See the files for instructions on what to change
     1.	Use psedit <file name> to edit in **PowerShell ISE**, or use a text editor
 1.	Add the changed file(s) to the commit (`git add <filename>` or `git add -A`)
 1.	Commit (`git commit -m "a note about what you did"`)
