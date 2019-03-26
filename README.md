@@ -20,6 +20,7 @@ Install-Module -Name posh-git -Force # step 1 was a needed update so we could ha
 Add-PoshGitToProfile
 
 # Make a directory for you GitHub projects
+cd ~ # change directory to the home/profile directory
 mkdir .\Documents\GitHub
 cd .\Documents\GitHub
 
